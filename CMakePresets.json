@@ -29,6 +29,19 @@
       "inherits": "base",
       "displayName": "Pico 2 (RP2350)",
       "cacheVariables": { "PICO_BOARD": "pico2" }
+    },
+    {
+      "name": "yd_rp2040",
+      "inherits": "base",
+      "displayName": "YD-RP2040 (16MB)",
+      "cacheVariables": { "PICO_BOARD": "yd_rp2040" }
+    },
+
+    {
+      "name": "waveshare_zero",
+      "inherits": "base",
+      "displayName": "Waveshare RP2040-Zero (no SWD)",
+      "cacheVariables": { "PICO_BOARD": "waveshare_rp2040_zero" }
     }
   ]
 }

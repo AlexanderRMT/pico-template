@@ -1,15 +1,14 @@
-#include <stdio.h>
+#include <cstdio>
 #include "pico/stdlib.h"
+#include "pico/status_led.h"
 
-int main(void) {
+int main() {
     stdio_init_all();
-
-    gpio_init(PICO_DEFAULT_LED_PIN);
-    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    status_led_init();
 
     uint32_t n = 0;
     while (true) {
-        gpio_xor_mask(1u << PICO_DEFAULT_LED_PIN);
+        status_led_set_state(n & 1);
         printf("tick %lu\n", n++);
         sleep_ms(500);
     }

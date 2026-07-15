@@ -41,10 +41,16 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME}
         pico_stdlib
+        pico_status_led
         hardware_pio
         hardware_pwm
         hardware_dma
 )
+
+# Pico W / Pico 2 W: status_led needs the CYW43 driver to reach the LED
+if (PICO_CYW43_SUPPORTED)
+    target_link_libraries(${PROJECT_NAME} pico_cyw43_arch_none)
+endif()
 
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_enable_stdio_uart(${PROJECT_NAME} 0)
