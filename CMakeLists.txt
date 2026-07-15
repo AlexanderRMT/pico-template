@@ -12,6 +12,12 @@ set(picotoolVersion 2.3.0)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 if (EXISTS ${picoVscode})
     include(${picoVscode})
+elseif (NOT DEFINED ENV{PICO_SDK_PATH})
+    message(FATAL_ERROR
+        "Pico SDK not found.\n"
+        "  Install the 'Raspberry Pi Pico' VS Code extension and create one project "
+        "with SDK ${sdkVersion} / toolchain ${toolchainVersion} to populate ~/.pico-sdk,\n"
+        "  or set PICO_SDK_PATH.")
 endif()
 # =============================================================
 

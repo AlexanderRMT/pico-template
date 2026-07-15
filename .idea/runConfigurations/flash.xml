@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="flash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico_template" TARGET_NAME="flash" CONFIG_NAME="pico">
+  <configuration default="false" name="flash" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="load -f -x $CMakeCurrentBuildDir$/pico_template.uf2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico_template" TARGET_NAME="pico_template" CONFIG_NAME="Debug" RUN_PATH="$USER_HOME$/.pico-sdk/picotool/2.3.0/picotool/picotool.exe">
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
     </method>
