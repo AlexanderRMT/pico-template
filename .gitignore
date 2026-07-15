@@ -1,0 +1,7 @@
+build/
+cmake-build-*/
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+.vscode/
+compile_commands.json
